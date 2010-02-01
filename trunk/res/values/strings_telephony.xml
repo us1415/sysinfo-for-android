@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="telephony_name">Telephony</string>
+	<string name="telephony_summary">Values from \'android.telephony.TelephonyManager\'.</string>
+	
+	<string-array name="telephony_item_names">
+		<item>Device Software Version</item>
+		<item>Device ID</item>
+		<item>Phone Type</item>
+		<item>Network Operator Name</item>
+		<item>Network Operator</item>
+		<item>Network Roaming</item>
+		<item>Network Country ISO</item>
+		<item>Network Type</item>
+		<item>SIM State</item>
+		<item>SIM Operator</item>
+		<item>SIM Operator Name</item>
+		<item>SIM Country ISO</item>
+		<item>SIM Serial Number</item>
+		<item>Subscriber ID</item>
+		<item>Line 1 Number</item>
+		<item>Voice Mail Number</item>
+		<item>Voice Mail Alpha Tag</item>
+		<item>Call State</item>
+		<item>Data Activity</item>
+		<item>Data State</item>
+	</string-array>
+	
+	<string-array name="telephony_item_descriptions">
+		<item>The software version number for the device, for example, the IMEI/SV for GSM phones.</item>
+		<item>The unique device ID, for example,the IMEI for GSM phones.</item>
+		<item>A constant indicating the device phone type.\n* 0: NONE\n* 1: GSM</item>
+		<item>The alphabetic name of current registered operator.\nAvailability: Only when user is registered to a network</item>
+		<item>The numeric name (MCC+MNC) of current registered operator.\nAvailability: Only when user is registered to a network</item>
+		<item>True if the device is considered roaming on the current network, for GSM purposes.\nAvailability: Only when user is registered to a network</item>
+		<item>The ISO country code equivilent of the current registered operator's MCC (Mobile Country Code).\nAvailability: Only when user is registered to a network</item>
+		<item>A constant indicating the radio technology (network type) currently in use on the device.\n* 0: UNKNOWN\n* 1: GPRS\n* 2: EDGE\n* 3: UMTS</item>
+		<item>A constant indicating the state of the device SIM card.\n* 0: UNKNOWN\n* 1: ABSENT\n* 2: PIN_REQUIRED\n* 3: PUK_REQUIRED\n* 4: NETWORK_LOCKED\n* 5: READY</item>
+		<item>The MCC+MNC (mobile country code + mobile network code) of the provider of the SIM. 5 or 6 decimal digits.\nAvailability: SIM state must be {android.telephony.TelephonyManager.SIM_STATE_READY}</item>
+		<item>The Service Provider Name (SPN).\nAvailability: SIM state must be {android.telephony.TelephonyManager.SIM_STATE_READY}</item>
+		<item>The ISO country code equivalent for the SIM provider's country code.</item>
+		<item>The serial number of the SIM, if applicable.</item>
+		<item>The unique subscriber ID, for example, the IMSI for a GSM phone.</item>
+		<item>The phone number string for line 1, for example, the MSISDN for a GSM phone.</item>
+		<item>The voice mail number.</item>
+		<item>The alphabetic identifier associated with the voice mail number.</item>
+		<item>A constant indicating the call state (cellular) on the device.\n* 0: IDLE\n* 1: RINGING\n* 2:OFFHOOK</item>
+		<item>A constant indicating the type of activity on a data connection (cellular).\n* 0: NONE\n* 1: IN\n* 2: OUT\n* 3: INOUT</item>
+		<item>A constant indicating the current data connection state (cellular).\n* 0: DISCONNECTED\n* 1: CONNECTING\n* 2: CONNECTED\n* 3: SUSPENDED</item>
+	</string-array>
+	
+	<string-array name="telephony_item_references">
+        <item>{android.telephony.TelephonyManager.getDeviceSoftwareVersion()}</item>
+        <item>{android.telephony.TelephonyManager.getDeviceId()}</item>
+        <item>{android.telephony.TelephonyManager.getPhoneType()}</item>
+        <item>{android.telephony.TelephonyManager.getNetworkOperatorName()}</item>
+        <item>{android.telephony.TelephonyManager.getNetworkOperator()}</item>
+        <item>{android.telephony.TelephonyManager.isNetworkRoaming()}</item>
+        <item>{android.telephony.TelephonyManager.getNetworkCountryIso()}</item>
+        <item>{android.telephony.TelephonyManager.getNetworkType()}</item>
+        <item>{android.telephony.TelephonyManager.getSimState()}</item>
+        <item>{android.telephony.TelephonyManager.getSimOperator()}</item>
+        <item>{android.telephony.TelephonyManager.getSimOperatorName()}</item>
+        <item>{android.telephony.TelephonyManager.getSimCountryIso()}</item>
+        <item>{android.telephony.TelephonyManager.getSimSerialNumber()}</item>
+        <item>{android.telephony.TelephonyManager.getSubscriberId()}</item>
+        <item>{android.telephony.TelephonyManager.getLine1Number()}</item>
+        <item>{android.telephony.TelephonyManager.getVoiceMailNumber()}</item>
+        <item>{android.telephony.TelephonyManager.getVoiceMailAlphaTag()}</item>
+        <item>{android.telephony.TelephonyManager.getCallState()}</item>
+        <item>{android.telephony.TelephonyManager.getDataActivity()}</item>
+        <item>{android.telephony.TelephonyManager.getDataState()}</item>
+	</string-array>
+</resources>
