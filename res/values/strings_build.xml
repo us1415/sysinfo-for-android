@@ -8,6 +8,8 @@
 		<item>Product</item>
 		<item>Device</item>
 		<item>Board</item>
+		<item>CPU ABI</item>
+		<item>Manufacturer</item>
 		<item>Brand</item>
 		<item>Model</item>
 		<item>Type</item>
@@ -26,6 +28,8 @@
 		<item>The name of the overall product.</item>
 		<item>The name of the industrial design.</item>
 		<item>The name of the underlying board, like "goldfish".</item>
+		<item>The name of the instruction set (CPU type + ABI convention) of native code.</item>
+		<item>The manufacturer of the product/hardware.</item>
 		<item>The brand (e.g., carrier) the software is customized for, if any.</item>
 		<item>The end-user-visible name for the end product.</item>
 		<item>The type of build, like "user" or "eng".</item>
@@ -44,6 +48,8 @@
 		<item>{android.os.Build.PRODUCT}</item>
 		<item>{android.os.Build.DEVICE}</item>
 		<item>{android.os.Build.BOARD}</item>
+		<item>{android.os.Build.CPU_ABI}</item>
+		<item>{android.os.Build.MANUFACTURER}</item>
 		<item>{android.os.Build.BRAND}</item>
 		<item>{android.os.Build.MODEL}</item>
 		<item>{android.os.Build.TYPE}</item>
