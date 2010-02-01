@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_save" android:title="@string/label_save"
+		android:icon="@android:drawable/ic_menu_save" />
+	<item android:id="@+id/menu_send" android:title="@string/label_send"
+		android:icon="@android:drawable/ic_menu_send" />
+	<item android:id="@+id/menu_refresh" android:title="@string/label_refresh"
+		android:icon="@drawable/ic_menu_refresh" />
+	<item android:id="@+id/menu_about" android:title="@string/label_about"
+		android:icon="@android:drawable/ic_menu_info_details" />
+</menu>

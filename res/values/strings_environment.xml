@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="environment_name">Environment</string>
+	<string name="environment_summary">Values from \'android.os.Environment\'</string>
+	
+	<string-array name="environment_item_names">
+		<item>Root Directory</item>
+		<item>Data Directory</item>
+		<item>External Storage Directory</item>
+		<item>Download Cache Directory</item>
+		<item>External Storage State</item>
+	</string-array>
+	
+	<string-array name="environment_item_descriptions">
+		<item>The Android root directory.</item>
+		<item>The Android data directory.</item>
+		<item>The Android external storage directory.</item>
+		<item>The Android Download/Cache content directory.</item>
+		<item>The current state of the external storage device.</item>
+	</string-array>
+	
+	<string-array name="environment_item_references">
+		<item>{android.os.Environment.getRootDirectory()}</item>
+		<item>{android.os.Environment.getDataDirectory()}</item>
+		<item>{android.os.Environment.getExternalStorageDirectory()}</item>
+		<item>{android.os.Environment.getDownloadCacheDirectory()}</item>
+		<item>{android.os.Environment.getExternalStorageState()}</item>
+	</string-array>
+</resources>

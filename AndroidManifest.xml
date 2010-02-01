@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="net.roguebean.sysinfo"
+	android:versionCode="5"
+	android:versionName="0.5">
+	<application
+		android:icon="@drawable/sysinfo_icon"
+		android:label="@string/sysinfo_name"
+		android:description="@string/sysinfo_description">
+		<activity
+			android:name=".Sysinfo"
+			android:label="@string/sysinfo_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".SysinfoListActivity"
+			android:label="@string/sysinfo_name">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="sysinfo" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="net.roguebean.android.app.AboutActivity">
+			<intent-filter>
+				<action android:name="net.roguebean.android.intent.action.VIEW_ABOUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="net.roguebean.android.app.SimpleTextViewer"
+			android:label="@string/label_stv">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="file" android:pathPattern=".*\\.txt" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/plain" />
+			</intent-filter>
+		</activity>
+	</application>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-sdk android:minSdkVersion="3" />
+</manifest>

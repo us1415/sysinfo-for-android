@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="settings_name">System Settings</string>
+	<string name="settings_summary">Values from \'android.provider.Settings.System\'.</string>
+	
+	<string-array name="settings_item_names">
+		<item>Stay On While Plugged In</item>
+		<item>End Button Behavior</item>
+		<item>Airplane Mode On</item>
+		<item>Airplane Mode Radios</item>
+		<item>Wi-Fi Use Static IP</item>
+		<item>Wi-Fi Static IP</item>
+		<item>Wi-Fi Static Gateway</item>
+		<item>Wi-Fi Static Netmask</item>
+		<item>Wi-Fi Static DNS1</item>
+		<item>Wi-Fi Static DNS2</item>
+		<item>Bluetooth Discoverability</item>
+		<item>Bluetooth Discoverability Timeout</item>
+		<item>Lock Pattern Enabled</item>
+		<item>Lock Pattern Visible</item>
+		<item>Next Alarm Formatted</item>
+		<item>Font Scale</item>
+		<item>Debug App</item>
+		<item>Wait For Debugger</item>
+		<item>Dim Screen</item>
+		<item>Screen Off Timeout</item>
+		<item>Screen Brightness</item>
+		<item>Show Processes</item>
+		<item>Always Finish Activities</item>
+		<item>Mode Ringer</item>
+		<item>Mode Ringer Streams Affected</item>
+		<item>Mute Streams Affected</item>
+		<item>Vibrate On</item>
+		<item>Volume Ring</item>
+		<item>Volume System</item>
+		<item>Volume Voice</item>
+		<item>Volume Music</item>
+		<item>Volume Alarm</item>
+		<item>Append For Last Audible</item>
+		<item>Ringtone</item>
+		<item>Notification Sound</item>
+		<item>Text Auto Replace</item>
+		<item>Text Auto Caps</item>
+		<item>Text Auto Punctuate</item>
+		<item>Text Show Password</item>
+		<item>Show GTalk Service Status</item>
+		<item>Wallpaper Activity</item>
+		<item>Auto Time</item>
+		<item>Time 12 24</item>
+		<item>Date Format</item>
+		<item>Setup Wizard Has Run</item>
+		<item>Window Animation Scale</item>
+		<item>Transition Animation Scale</item>
+		<item>DTMF Tone When Dialing</item>
+		<item>Sound Effects Enabled</item>
+		<item>ADB Enabled</item>
+		<item>Android ID</item>
+		<item>Bluetooth On</item>
+		<item>Data Roaming</item>
+		<item>Device Provisioned</item>
+		<item>HTTP Proxy</item>
+		<item>Install Non Market Apps</item>
+		<item>Location Providers Allowed</item>
+		<item>Logging ID</item>
+		<item>Network Preference</item>
+		<item>Parental Control Enabled</item>
+		<item>Parental Control Last Update</item>
+		<item>Parental Control Redirect URL</item>
+		<item>Settings Classname</item>
+		<item>USB Mass Storage Enabled</item>
+		<item>Use Google Mail</item>
+		<item>Wi-Fi Networks Available Notification On</item>
+		<item>Wi-Fi Networks Available Repeat Delay</item>
+		<item>Wi-Fi Num Open Networks Kept</item>
+		<item>Wi-Fi On</item>
+		<item>Wi-Fi Watchdog Acceptable Packet Loss Percentage</item>
+		<item>Wi-Fi Watchdog AP Count</item>
+		<item>Wi-Fi Watchdog Background Check Delay ms</item>
+		<item>Wi-Fi Watchdog Background Check Enabled</item>
+		<item>Wi-Fi Watchdog Background Check Timeout ms</item>
+		<item>Wi-Fi Watchdog Initial Ignored Ping Count</item>
+		<item>Wi-Fi Watchdog Max AP Checks</item>
+		<item>Wi-Fi Watchdog On</item>
+		<item>Wi-Fi Watchdog Ping Count</item>
+		<item>Wi-Fi Watchdog Ping Delay ms</item>
+		<item>Wi-Fi Watchdog Ping Timeout ms</item>
+	</string-array>
+	
+	<string-array name="settings_item_descriptions">
+		<item>Whether we keep the device on while the device is plugged in. Supported values are:\n* 0 to never stay on while plugged in\n* {android.os.BatteryManager.BATTERY_PLUGGED_AC} to stay on for AC charger\n* {android.os.BatteryManager.BATTERY_PLUGGED_USB} to stay on for USB charger\nThese values can be OR-ed together.</item>
+		<item>What happens when the user presses the end call button if they\'re not on a call.\n<b>Values:</b>\n* 0 - The end button does nothing.\n* 1 - The end button goes to the home screen.\n* 2 - The end button puts the device to sleep and locks the keyguard.\n* 3 - The end button goes to the home screen.  If the user is already on the home screen, it puts the device to sleep.</item>
+		<item>Whether Airplane Mode is on.</item>
+		<item>A comma separated list of radios that need to be disabled when airplane mode is on. This overrides WIFI_ON and BLUETOOTH_ON, if Wi-Fi and bluetooth are included in the comma separated list.</item>
+		<item>Whether to use static IP and other static network attributes. Set to 1 for true and 0 for false.</item>
+		<item>The static IP address. Example: "192.168.1.51"</item>
+		<item>If using static IP, the gateway's IP address. Example: "192.168.1.1"</item>
+		<item>If using static IP, the net mask. Example: "255.255.255.0"</item>
+		<item>If using static IP, the primary DNS's IP address. Example: "192.168.1.1"</item>
+		<item>If using static IP, the secondary DNS's IP address. Example: "192.168.1.2"</item>
+		<item>Determines whether remote devices may discover and/or connect to this device.\nType: INT\n* 2 -- discoverable and connectable\n* 1 -- connectable but not discoverable\n* 0 -- neither connectable nor discoverable</item>
+		<item>Bluetooth discoverability timeout.  If this value is nonzero, then Bluetooth becomes discoverable for a certain number of seconds, after which is becomes simply connectable.  The value is in seconds.</item>
+		<item>Whether autolock is enabled (0 = false, 1 = true)</item>
+		<item>Whether lock pattern is visible as user enters (0 = false, 1 = true)</item>
+		<item>A formatted string of the next alarm that is set, or the empty string if there is no alarm set.</item>
+		<item>Scaling factor for fonts, float.</item>
+		<item>Name of an application package to be debugged.</item>
+		<item>If 1, when launching DEBUG_APP it will wait for the debugger before starting user code.  If 0, it will run normally.</item>
+		<item>Whether or not to dim the screen. 0=no  1=yes</item>
+		<item>The timeout before the screen turns off.</item>
+		<item>The screen backlight brightness between 0 and 255.</item>
+		<item>Control whether the process CPU usage meter should be shown.</item>
+		<item>If 1, the activity manager will aggressively finish activities and processes as soon as they are no longer needed.  If 0, the normal extended lifetime is used.</item>
+		<item>Ringer mode. This is used internally, changing this value will not change the ringer mode. See AudioManager.</item>
+		<item>Determines which streams are affected by ringer mode changes. The stream type's bit should be set to 1 if it should be muted when going into an inaudible ringer mode.</item>
+		<item>Determines which streams are affected by mute. The stream type's bit should be set to 1 if it should be muted when a mute request is received.</item>
+		<item>Whether vibrate is on for different events. This is used internally, changing this value will not change the vibrate. See AudioManager.</item>
+		<item>Ringer volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>System/notifications volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>Voice call volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>Music/media/gaming volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>Alarm volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>Appended to various volume related settings to record the previous values before they the settings were affected by a silent/vibrate ringer mode change.</item>
+		<item>Persistent store for the system-wide default ringtone URI.\nIf you need to play the default ringtone at any given time, it is recommended you give {android.provider.Settings.System.DEFAULT_RINGTONE_URI} to the media player. It will resolve to the set default ringtone at the time of playing.</item>
+		<item>Persistent store for the system-wide default notification sound.</item>
+		<item>Setting to enable Auto Replace (AutoText) in text editors. 1 = On, 0 = Off</item>
+		<item>Setting to enable Auto Caps in text editors. 1 = On, 0 = Off</item>
+		<item>Setting to enable Auto Punctuate in text editors. 1 = On, 0 = Off. This feature converts two spaces to a "." and space.</item>
+		<item>Setting to showing password characters in text editors. 1 = On, 0 = Off</item>
+		<item>Setting to showing GTalk service status.</item>
+		<item>Name of activity to use for wallpaper on the home screen.</item>
+		<item>Value to specify if the user prefers the date, time and time zone to be automatically fetched from the network (NITZ). 1=yes, 0=no</item>
+		<item>Display times as 12 or 24 hours\n 12\n 24</item>
+		<item>Date format string\n mm/dd/yyyy\n dd/mm/yyyy\n yyyy/mm/dd</item>
+		<item>Whether the setup wizard has been run before (on first boot), or if it still needs to be run.\n nonzero = it has been run in the past\n 0 = it has not been run in the past</item>
+		<item>Scaling factor for normal window animations. Setting to 0 will disable window animations.</item>
+		<item>Scaling factor for activity transition animations. Setting to 0 will disable window animations.</item>
+		<item>Whether the audible DTMF tones are played by the dialer when dialing. The value is boolean (1 or 0).</item>
+		<item>Whether the sounds effects (key clicks, lid open ...) are enabled. The value is boolean (1 or 0).</item>
+		<item>Whether ADB is enabled.</item>
+		<item>The Android ID (a unique 64-bit value) as a hex string. Identical to that obtained by calling GoogleLoginService.getAndroidId(); it is also placed here so you can get it without binding to a service.</item>
+		<item>Whether bluetooth is enabled/disabled\n0=disabled. 1=enabled.</item>
+		<item>Whether or not data roaming is enabled. (0 = false, 1 = true)</item>
+		<item>Whether the device has been provisioned (0 = false, 1 = true)</item>
+		<item>Host name and port for a user-selected proxy.</item>
+		<item>Whether the package installer should allow installation of apps downloaded from sources other than the Android Market (vending machine).\n\n1 = allow installing from other sources\n0 = only allow installing from the Android Market</item>
+		<item>Comma-separated list of location providers that activities may access.</item>
+		<item>The Logging ID (a unique 64-bit value) as a hex string. Used as a pseudonymous identifier for logging.\n@deprecated This identifier is poorly initialized and has many collisions.  It should not be used.</item>
+		<item>User preference for which network(s) should be used. Only the connectivity service should touch this.</item>
+		<item>-</item>
+		<item>-</item>
+		<item>-</item>
+		<item>Settings classname to launch when Settings is clicked from All Applications.  Needed because of user testing between the old and new Settings apps.</item>
+		<item>USB Mass Storage Enabled</item>
+		<item>If this setting is set (to anything), then all references to Gmail on the device must change to Google Mail.</item>
+		<item>Whether to notify the user of open networks.\nIf not connected and the scan results have an open network, we will put this notification up. If we attempt to connect to a network or the open network(s) disappear, we remove the notification. When we show the notification, we will not show it again for {android.provider.Settings.Secure.WIFI_NETWORKS_AVAILABLE_REPEAT_DELAY} time.</item>
+		<item>Delay (in seconds) before repeating the Wi-Fi networks available notification. Connecting to a network will reset the timer.</item>
+		<item>When the number of open networks exceeds this number, the least-recently-used excess networks will be removed.</item>
+		<item>Whether the Wi-Fi should be on.  Only the Wi-Fi service should touch this.</item>
+		<item>The acceptable packet loss percentage (range 0 - 100) before trying another AP on the same network.</item>
+		<item>The number of access points required for a network in order for the watchdog to monitor it.</item>
+		<item>The delay between background checks.</item>
+		<item>Whether the Wi-Fi watchdog is enabled for background checking even after it thinks the user has connected to a good access point.</item>
+		<item>The timeout for a background ping</item>
+		<item>The number of initial pings to perform that *may* be ignored if they fail. Again, if these fail, they will *not* be used in packet loss calculation. For example, one network always seemed to time out for the first couple pings, so this is set to 3 by default.</item>
+		<item>The maximum number of access points (per network) to attempt to test. If this number is reached, the watchdog will no longer monitor the initial connection state for the network. This is a safeguard for networks containing multiple APs whose DNS does not respond to pings.</item>
+		<item>Whether the Wi-Fi watchdog is enabled.</item>
+		<item>The number of pings to test if an access point is a good connection.</item>
+		<item>The delay between pings.</item>
+		<item>The timeout per ping.</item>
+	</string-array>
+	
+	<string-array name="settings_item_references">
+		<item>{android.provider.Settings.System.STAY_ON_WHILE_PLUGGED_IN}</item>
+		<item>{android.provider.Settings.System.END_BUTTON_BEHAVIOR}</item>
+        <item>{android.provider.Settings.System.AIRPLANE_MODE_ON}</item>
+        <item>{android.provider.Settings.System.AIRPLANE_MODE_RADIOS}</item>
+        <item>{android.provider.Settings.System.WIFI_USE_STATIC_IP}</item>
+        <item>{android.provider.Settings.System.WIFI_STATIC_IP}</item>
+        <item>{android.provider.Settings.System.WIFI_STATIC_GATEWAY}</item>
+        <item>{android.provider.Settings.System.WIFI_STATIC_NETMASK}</item>
+        <item>{android.provider.Settings.System.WIFI_STATIC_DNS1}</item>
+        <item>{android.provider.Settings.System.WIFI_STATIC_DNS2}</item>
+        <item>{android.provider.Settings.System.BLUETOOTH_DISCOVERABILITY}</item>
+        <item>{android.provider.Settings.System.BLUETOOTH_DISCOVERABILITY_TIMEOUT}</item>
+        <item>{android.provider.Settings.System.LOCK_PATTERN_ENABLED}</item>
+        <item>{android.provider.Settings.System.LOCK_PATTERN_VISIBLE}</item>
+        <item>{android.provider.Settings.System.NEXT_ALARM_FORMATTED}</item>
+        <item>{android.provider.Settings.System.FONT_SCALE}</item>
+        <item>{android.provider.Settings.System.DEBUG_APP}</item>
+        <item>{android.provider.Settings.System.WAIT_FOR_DEBUGGER}</item>
+        <item>{android.provider.Settings.System.DIM_SCREEN}</item>
+        <item>{android.provider.Settings.System.SCREEN_OFF_TIMEOUT}</item>
+        <item>{android.provider.Settings.System.SCREEN_BRIGHTNESS}</item>
+        <item>{android.provider.Settings.System.SHOW_PROCESSES}</item>
+        <item>{android.provider.Settings.System.ALWAYS_FINISH_ACTIVITIES}</item>
+        <item>{android.provider.Settings.System.MODE_RINGER}</item>
+        <item>{android.provider.Settings.System.MODE_RINGER_STREAMS_AFFECTED}</item>
+        <item>{android.provider.Settings.System.MUTE_STREAMS_AFFECTED}</item>
+        <item>{android.provider.Settings.System.VIBRATE_ON}</item>
+        <item>{android.provider.Settings.System.VOLUME_RING}</item>
+        <item>{android.provider.Settings.System.VOLUME_SYSTEM}</item>
+        <item>{android.provider.Settings.System.VOLUME_VOICE}</item>
+        <item>{android.provider.Settings.System.VOLUME_MUSIC}</item>
+        <item>{android.provider.Settings.System.VOLUME_ALARM}</item>
+        <item>{android.provider.Settings.System.APPEND_FOR_LAST_AUDIBLE}</item>
+        <item>{android.provider.Settings.System.RINGTONE}</item>
+        <item>{android.provider.Settings.System.NOTIFICATION_SOUND}</item>
+        <item>{android.provider.Settings.System.TEXT_AUTO_REPLACE}</item>
+        <item>{android.provider.Settings.System.TEXT_AUTO_CAPS}</item>
+        <item>{android.provider.Settings.System.TEXT_AUTO_PUNCTUATE}</item>
+        <item>{android.provider.Settings.System.TEXT_SHOW_PASSWORD}</item>
+        <item>{android.provider.Settings.System.SHOW_GTALK_SERVICE_STATUS}</item>
+        <item>{android.provider.Settings.System.WALLPAPER_ACTIVITY}</item>
+        <item>{android.provider.Settings.System.AUTO_TIME}</item>
+        <item>{android.provider.Settings.System.TIME_12_24}</item>
+        <item>{android.provider.Settings.System.DATE_FORMAT}</item>
+        <item>{android.provider.Settings.System.SETUP_WIZARD_HAS_RUN}</item>
+        <item>{android.provider.Settings.System.WINDOW_ANIMATION_SCALE}</item>
+        <item>{android.provider.Settings.System.TRANSITION_ANIMATION_SCALE}</item>
+        <item>{android.provider.Settings.System.DTMF_TONE_WHEN_DIALING}</item>
+        <item>{android.provider.Settings.System.SOUND_EFFECTS_ENABLED}</item>
+        <item>{android.provider.Settings.System.ADB_ENABLED}</item>
+        <item>{android.provider.Settings.System.ANDROID_ID}</item>
+        <item>{android.provider.Settings.System.BLUETOOTH_ON}</item>
+        <item>{android.provider.Settings.System.DATA_ROAMING}</item>
+        <item>{android.provider.Settings.System.DEVICE_PROVISIONED}</item>
+        <item>{android.provider.Settings.System.HTTP_PROXY}</item>
+        <item>{android.provider.Settings.System.INSTALL_NON_MARKET_APPS}</item>
+        <item>{android.provider.Settings.System.LOCATION_PROVIDERS_ALLOWED}</item>
+        <item>{android.provider.Settings.System.LOGGING_ID}</item>
+        <item>{android.provider.Settings.System.NETWORK_PREFERENCE}</item>
+        <item>{android.provider.Settings.System.PARENTAL_CONTROL_ENABLED}</item>
+        <item>{android.provider.Settings.System.PARENTAL_CONTROL_LAST_UPDATE}</item>
+        <item>{android.provider.Settings.System.PARENTAL_CONTROL_REDIRECT_URL}</item>
+        <item>{android.provider.Settings.System.SETTINGS_CLASSNAME}</item>
+        <item>{android.provider.Settings.System.USB_MASS_STORAGE_ENABLED}</item>
+        <item>{android.provider.Settings.System.USE_GOOGLE_MAIL}</item>
+        <item>{android.provider.Settings.System.WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON}</item>
+        <item>{android.provider.Settings.System.WIFI_NETWORKS_AVAILABLE_REPEAT_DELAY}</item>
+        <item>{android.provider.Settings.System.WIFI_NUM_OPEN_NETWORKS_KEPT}</item>
+        <item>{android.provider.Settings.System.WIFI_ON}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_ACCEPTABLE_PACKET_LOSS_PERCENTAGE}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_AP_COUNT}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_BACKGROUND_CHECK_DELAY_MS}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_BACKGROUND_CHECK_ENABLED}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_BACKGROUND_CHECK_TIMEOUT_MS}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_INITIAL_IGNORED_PING_COUNT}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_MAX_AP_CHECKS}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_ON}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_PING_COUNT}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_PING_DELAY_MS}</item>
+        <item>{android.provider.Settings.System.WIFI_WATCHDOG_PING_TIMEOUT_MS}</item>
+	</string-array>
+</resources>
