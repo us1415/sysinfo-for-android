@@ -8,7 +8,7 @@
 		android:label="@string/sysinfo_name"
 		android:description="@string/sysinfo_description">
 		<activity
-			android:name=".Sysinfo"
+			android:name="net.roguebean.sysinfo.Sysinfo"
 			android:label="@string/sysinfo_name">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -16,7 +16,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".SysinfoListActivity"
+			android:name="net.roguebean.sysinfo.SysinfoListActivity"
 			android:label="@string/sysinfo_name">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
