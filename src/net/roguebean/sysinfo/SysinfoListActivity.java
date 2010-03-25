@@ -55,7 +55,7 @@ import net.roguebean.android.content.res.XResources;
  * <br/>
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class SysinfoListActivity extends ExpandableListActivity {
     

@@ -16,7 +16,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Activity</code> class provides values about the activity.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class Values4Activity extends Values {
     

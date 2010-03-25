@@ -12,7 +12,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Runtime</code> class provides values about the runtime.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class Values4Runtime extends Values {
     

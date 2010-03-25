@@ -8,7 +8,7 @@ package net.roguebean.android.widget;
  * The <code>TitleSummaryItem</code> class represents an item which has title, summary and arbitrary data.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class TitleSummaryItem {
     

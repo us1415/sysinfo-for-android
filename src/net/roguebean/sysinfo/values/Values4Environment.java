@@ -13,7 +13,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Environment</code> class provides values about the environment.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class Values4Environment extends Values {
 

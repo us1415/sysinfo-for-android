@@ -8,7 +8,7 @@ package net.roguebean.sysinfo;
  * The <code>SysinfoListItem</code> class represents a single information item.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 class SysinfoListItem {
     

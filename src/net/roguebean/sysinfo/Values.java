@@ -10,7 +10,7 @@ import android.app.Activity;
  * The <code>Values</code> class provides values of information in specific category.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public abstract class Values {
     
