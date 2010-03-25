@@ -15,7 +15,7 @@ import net.roguebean.android.content.res.PatternedStringResolver;
  * of a java element into a string indicating Android API reference URL.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 class AndroidDocumentReferenceResolver extends PatternedStringResolver {
     

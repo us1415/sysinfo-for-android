@@ -15,7 +15,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Build</code> class provides values about the build.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class Values4Build extends Values {
     

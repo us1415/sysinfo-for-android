@@ -13,7 +13,7 @@ import net.roguebean.java.util.XArrays;
  * name(not by id) and in as resolved forms.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class XResources extends Resources {
     

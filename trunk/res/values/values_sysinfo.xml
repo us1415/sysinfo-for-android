@@ -8,5 +8,6 @@
     	<item>activity</item>
     	<item>telephony</item>
     	<item>runtime</item>
+    	<item>configuration</item>
     </string-array>
 </resources>

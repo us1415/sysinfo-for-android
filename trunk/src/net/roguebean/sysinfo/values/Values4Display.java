@@ -14,7 +14,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Display</code> class provides values about the display.
  * 
  * @author Yonghwan Cho
- * @version 0.5
+ * @version 0.6
  */
 public class Values4Display extends Values {
     
