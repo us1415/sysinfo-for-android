@@ -139,6 +139,7 @@ final class SysinfoUtils {
                 onSaved(info, dst);
             }
         } catch(Exception e) {
+            e.printStackTrace();
             if(w != null) {
                 try {
                     w.close();
