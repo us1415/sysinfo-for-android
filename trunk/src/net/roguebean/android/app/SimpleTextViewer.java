@@ -23,7 +23,7 @@ import android.widget.Toast;
  * The <code>SimpleTextViewer</code> class is an activity class to show plain text contents.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class SimpleTextViewer extends Activity {
     

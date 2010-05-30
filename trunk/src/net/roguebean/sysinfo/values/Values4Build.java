@@ -4,8 +4,6 @@
  */
 package net.roguebean.sysinfo.values;
 
-import java.lang.reflect.Field;
-
 import android.app.Activity;
 import android.os.Build;
 
@@ -15,38 +13,26 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Build</code> class provides values about the build.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class Values4Build extends Values {
     
     @Override
     public Object[] values(Activity activity) {
-        String cpu_abi;
-        String manufacturer;
-        
-        try {
-            Field field = Build.class.getDeclaredField("CPU_ABI");
-            Object value = field.get(null);
-            cpu_abi = String.valueOf(value);
-        } catch(Exception e) {
-            cpu_abi = "N/A (Available only on Android 1.6 or later)";
-        }
-        
-        try {
-            Field field = Build.class.getDeclaredField("MANUFACTURER");
-            Object value = field.get(null);
-            manufacturer = String.valueOf(value);
-        } catch(Exception e) {
-            manufacturer = "N/A (Available only on Android 1.6 or later)";
-        }
+        // prepare values which are introduced since API level 5.
+        String cpu_abi2 = (String) getFieldValue(Build.class, "CPU_ABI2", null, 8);
+        String hardware = (String) getFieldValue(Build.class, "HARDWARE", null, 8);
+        String radio = (String) getFieldValue(Build.class, "RADIO", null, 8);
+        String bootloader = (String) getFieldValue(Build.class, "BOOTLOADER", null, 8);
         
         return new Object[] {
                 Build.ID,
                 Build.PRODUCT,
                 Build.DEVICE,
                 Build.BOARD,
-                cpu_abi,
-                manufacturer,
+                Build.CPU_ABI,
+                cpu_abi2,
+                Build.MANUFACTURER,
                 Build.BRAND,
                 Build.MODEL,
                 Build.TYPE,
@@ -55,6 +41,9 @@ public class Values4Build extends Values {
                 Build.TIME,
                 Build.USER,
                 Build.HOST,
+                hardware,
+                radio,
+                bootloader,
                 Build.VERSION.INCREMENTAL,
                 Build.VERSION.RELEASE,
                 Build.VERSION.SDK

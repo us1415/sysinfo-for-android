@@ -18,7 +18,7 @@ import net.roguebean.sysinfo.R;
  * The <code>TitleSummaryArrayAdapter</code> class provides list items from <code>TitleSummaryItem<code> instances.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class TitleSummaryArrayAdapter<T extends TitleSummaryItem> extends ArrayAdapter<T> {
     

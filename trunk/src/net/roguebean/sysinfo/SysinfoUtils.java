@@ -35,7 +35,7 @@ import net.roguebean.android.app.AboutActivity;
  * The <code>SysinfoUtils</code> class provides utility methods for sysinfo activities.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 final class SysinfoUtils {
     

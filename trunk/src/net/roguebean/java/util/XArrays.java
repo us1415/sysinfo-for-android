@@ -11,7 +11,7 @@ import java.lang.reflect.Array;
  * <code>XArrays</code> are generally based on the methods defined in <code>Arrays</code> class of Java 6.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public final class XArrays {
     

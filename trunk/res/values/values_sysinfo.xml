@@ -3,11 +3,11 @@
     <string-array name="sysinfo_ids">
     	<item>build</item>
     	<item>environment</item>
-    	<item>settings</item>
     	<item>display</item>
-    	<item>activity</item>
-    	<item>telephony</item>
-    	<item>runtime</item>
     	<item>configuration</item>
+    	<item>settings</item>
+    	<item>telephony</item>
+    	<item>activity</item>
+    	<item>runtime</item>
     </string-array>
 </resources>

@@ -27,7 +27,7 @@ import net.roguebean.android.widget.TitleSummaryItem;
  * The <code>Sysinfo</code> class is the Sysinfo launcher activity.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class Sysinfo extends ListActivity {
     

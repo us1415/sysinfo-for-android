@@ -9,7 +9,7 @@ package net.roguebean.android.content.res;
  * are responsible for providing the rule of resolving strings.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public interface StringResolver {
     

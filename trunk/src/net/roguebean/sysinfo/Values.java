@@ -4,13 +4,17 @@
  */
 package net.roguebean.sysinfo;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 import android.app.Activity;
+import android.os.Build;
 
 /**
  * The <code>Values</code> class provides values of information in specific category.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public abstract class Values {
     
@@ -87,6 +91,42 @@ public abstract class Values {
         }
         
         return b.toString();
+    }
+    
+    protected static Object getFieldValue(Class<?> cls, String name, Object instance, int apiLevel) {
+        Object value;
+        if(Build.VERSION.SDK_INT >= apiLevel) {
+            try {
+                Field field = cls.getField(name);
+                value = field.get(instance);
+            } catch(Exception e) {
+                e.printStackTrace();
+                value = null;
+            }
+        } else {
+            value = getMessageForNotAvaliable(apiLevel);
+        }
+        return value;
+    }
+    
+    protected static Object getMethodValue(Class<?> cls, String name, Object instance, int apiLevel) {
+        Object value;
+        if(Build.VERSION.SDK_INT >= apiLevel) {
+            try {
+                Method method = cls.getMethod(name);
+                value = method.invoke(instance);
+            } catch(Exception e) {
+                e.printStackTrace();
+                value = null;
+            }
+        } else {
+            value = getMessageForNotAvaliable(apiLevel);
+        }
+        return value;
+    }
+    
+    protected static String getMessageForNotAvaliable(int apiLevel) {
+        return "N/A (API Level " + apiLevel + ")";
     }
     
 }

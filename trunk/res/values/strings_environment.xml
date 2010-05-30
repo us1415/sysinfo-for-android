@@ -9,6 +9,15 @@
 		<item>External Storage Directory</item>
 		<item>Download Cache Directory</item>
 		<item>External Storage State</item>
+		<item>Directory - ALARMS</item>
+		<item>Public Directory - DCIM</item>
+		<item>Public Directory - DOWNLOADS</item>
+		<item>Public Directory - MOVIES</item>
+		<item>Public Directory - MUSIC</item>
+		<item>Public Directory - NOTIFICATIONS</item>
+		<item>Public Directory - PICTURES</item>
+		<item>Public Directory - PODCASTS</item>
+		<item>Public Directory - RINGTONES</item>
 	</string-array>
 	
 	<string-array name="environment_item_descriptions">
@@ -17,6 +26,15 @@
 		<item>The Android external storage directory.</item>
 		<item>The Android Download/Cache content directory.</item>
 		<item>The current state of the external storage device.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_ALARMS}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_DICM}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_DOWNLOADS}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_MOVIES}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_MUSIC}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_NOTIFICATIONS}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_PICTURES}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_PODCASTS}.</item>
+		<item>A top-level public external storage directory for placing files of a particular type: which is a value returned by invoking {android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)} with the parameter {android.os.Environment.DIRECTORY_RINGTONES}.</item>
 	</string-array>
 	
 	<string-array name="environment_item_references">
@@ -25,5 +43,14 @@
 		<item>{android.os.Environment.getExternalStorageDirectory()}</item>
 		<item>{android.os.Environment.getDownloadCacheDirectory()}</item>
 		<item>{android.os.Environment.getExternalStorageState()}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_ALARMS}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_DCIM}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_DOWNLOADS}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_MOVIES}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_MUSIC}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_NOTIFICATIONS}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_PICTURES}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_PODCASTS}</item>
+		<item>{android.os.Environment.getExternalStoragePublicDirectory(java.lang.String)}, {android.os.Environment.DIRECTORY_RINGTONES}</item>
 	</string-array>
 </resources>
