@@ -4,8 +4,6 @@
  */
 package net.roguebean.sysinfo.values;
 
-import java.lang.reflect.Method;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -16,7 +14,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Activity</code> class provides values about the activity.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class Values4Activity extends Values {
     
@@ -26,14 +24,8 @@ public class Values4Activity extends Values {
         MemoryInfo info = new MemoryInfo();
         m.getMemoryInfo(info);
         
-        String memoryClass;
-        try {
-            Method method = ActivityManager.class.getMethod("getMemoryClass");
-            Object result = method.invoke(m);
-            memoryClass = String.valueOf(result);
-        } catch(Exception e) {
-            memoryClass = "N/A (Available only on Android 2.0 or later)";
-        }
+        // ActivityManager.getMemoryClass()
+        String memoryClass = String.valueOf(getMethodValue(ActivityManager.class, "getMemoryClass", m, 5));
         
         return new Object[] { memoryClass, info.availMem, info.lowMemory, info.threshold };
     }

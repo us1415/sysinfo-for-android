@@ -14,7 +14,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Telephony</code> class provides values about the telephony.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class Values4Telephony extends Values {
     

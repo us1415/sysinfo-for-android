@@ -15,7 +15,7 @@ import net.roguebean.java.util.XArrays;
  * The <code>PatterenedStringResolver</code> class provides methods to resolve patterned string.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public abstract class PatternedStringResolver implements StringResolver {
     

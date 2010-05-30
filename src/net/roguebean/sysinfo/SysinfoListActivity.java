@@ -44,10 +44,11 @@ import net.roguebean.android.content.res.XResources;
  * <li>all</li>
  * <li>build</li>
  * <li>environment</li>
- * <li>settings</li>
  * <li>display</li>
- * <li>activity</li>
+ * <li>configuration</li>
+ * <li>settings</li>
  * <li>telephony</li>
+ * <li>activity</li>
  * <li>runtime</li>
  * </ul>
  * <br/>
@@ -55,7 +56,7 @@ import net.roguebean.android.content.res.XResources;
  * <br/>
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class SysinfoListActivity extends ExpandableListActivity {
     

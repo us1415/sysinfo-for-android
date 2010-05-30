@@ -9,6 +9,7 @@
 		<item>Device</item>
 		<item>Board</item>
 		<item>CPU ABI</item>
+		<item>CPU ABI 2</item>
 		<item>Manufacturer</item>
 		<item>Brand</item>
 		<item>Model</item>
@@ -18,6 +19,9 @@
 		<item>Time</item>
 		<item>User</item>
 		<item>Host</item>
+		<item>Hardware</item>
+		<item>Radio</item>
+		<item>Bootloader</item>
 		<item>Incremental Version</item>
 		<item>Release Version</item>
 		<item>SDK Version</item>
@@ -29,6 +33,7 @@
 		<item>The name of the industrial design.</item>
 		<item>The name of the underlying board, like "goldfish".</item>
 		<item>The name of the instruction set (CPU type + ABI convention) of native code.</item>
+		<item>The name of the second instruction set (CPU type + ABI convention) of native code.</item>
 		<item>The manufacturer of the product/hardware.</item>
 		<item>The brand (e.g., carrier) the software is customized for, if any.</item>
 		<item>The end-user-visible name for the end product.</item>
@@ -38,6 +43,9 @@
 		<item>This property only makes sense for internal engineering builds.</item>
 		<item>This property only makes sense for internal engineering builds.</item>
 		<item>This property only makes sense for internal engineering builds.</item>
+		<item>The name of the hardware (from the kernel command line or /proc).</item>
+		<item>The radio firmware version number.</item>
+		<item>The system bootloader version number.</item>
 		<item>The internal value used by the underlying source control to represent this build.  E.g., a perforce changelist number or a git hash.</item>
 		<item>The user-visible version string.  E.g., "1.0" or "3.4b5".</item>
 		<item>The user-visible SDK version of the framework. It is an integer starting at 1.</item>
@@ -49,6 +57,7 @@
 		<item>{android.os.Build.DEVICE}</item>
 		<item>{android.os.Build.BOARD}</item>
 		<item>{android.os.Build.CPU_ABI}</item>
+		<item>{android.os.Build.CPU_ABI2}</item>
 		<item>{android.os.Build.MANUFACTURER}</item>
 		<item>{android.os.Build.BRAND}</item>
 		<item>{android.os.Build.MODEL}</item>
@@ -58,6 +67,9 @@
 		<item>{android.os.Build.TIME}</item>
 		<item>{android.os.Build.USER}</item>
 		<item>{android.os.Build.HOST}</item>
+		<item>{android.os.Build.HARDWARE}</item>
+		<item>{android.os.Build.RADIO}</item>
+		<item>{android.os.Build.BOOTLOADER}</item>
 		<item>{android.os.Build.VERSION.INCREMENTAL}</item>
 		<item>{android.os.Build.VERSION.RELEASE}</item>
 		<item>{android.os.Build.VERSION.SDK}</item>

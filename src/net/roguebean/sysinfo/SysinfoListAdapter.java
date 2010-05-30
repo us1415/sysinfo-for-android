@@ -18,7 +18,7 @@ import android.widget.TextView;
  * view.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 class SysinfoListAdapter extends BaseExpandableListAdapter {
     

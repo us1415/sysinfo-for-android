@@ -7,6 +7,7 @@ package net.roguebean.sysinfo.values;
 import static android.provider.Settings.System.*;
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.os.Build;
 import android.provider.Settings;
 
 import net.roguebean.sysinfo.Values;
@@ -15,7 +16,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Settings</code> class provides values about the settings.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class Values4Settings extends Values {
     
@@ -44,6 +45,7 @@ public class Values4Settings extends Values {
                 Settings.System.getString(r, DIM_SCREEN),
                 Settings.System.getString(r, SCREEN_OFF_TIMEOUT),
                 Settings.System.getString(r, SCREEN_BRIGHTNESS),
+                getScreenBrightnessMode(r),
                 Settings.System.getString(r, SHOW_PROCESSES),
                 Settings.System.getString(r, ALWAYS_FINISH_ACTIVITIES),
                 Settings.System.getString(r, MODE_RINGER),
@@ -55,6 +57,7 @@ public class Values4Settings extends Values {
                 Settings.System.getString(r, VOLUME_VOICE),
                 Settings.System.getString(r, VOLUME_MUSIC),
                 Settings.System.getString(r, VOLUME_ALARM),
+                getVolumeBluetoothSCO(r),
                 Settings.System.getString(r, APPEND_FOR_LAST_AUDIBLE),
                 Settings.System.getString(r, RINGTONE),
                 Settings.System.getString(r, NOTIFICATION_SOUND),
@@ -104,6 +107,36 @@ public class Values4Settings extends Values {
                 Settings.System.getString(r, WIFI_WATCHDOG_PING_DELAY_MS),
                 Settings.System.getString(r, WIFI_WATCHDOG_PING_TIMEOUT_MS),
         };
+    }
+    
+    private static final String SCREEN_BRIGHTNESS_MODE = "screen_brightness_mode";
+    
+    private static String getScreenBrightnessMode(ContentResolver r) {
+        String value;
+        
+        final int apiLevel = 8;
+        if(Build.VERSION.SDK_INT >= apiLevel) {
+            value = Settings.System.getString(r, SCREEN_BRIGHTNESS_MODE);
+        } else {
+            value = getMessageForNotAvaliable(apiLevel);
+        }
+        
+        return value;
+    }
+    
+    private static final String VOLUME_BLUETOOTH_SCO = "volume_bluetooth_sco";
+    
+    private static String getVolumeBluetoothSCO(ContentResolver r) {
+        String value;
+        
+        final int apiLevel = 8;
+        if(Build.VERSION.SDK_INT >= apiLevel) {
+            value = Settings.System.getString(r, VOLUME_BLUETOOTH_SCO);
+        } else {
+            value = getMessageForNotAvaliable(apiLevel);
+        }
+        
+        return value;
     }
     
 }

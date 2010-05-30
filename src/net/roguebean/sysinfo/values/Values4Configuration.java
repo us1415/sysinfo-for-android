@@ -5,8 +5,6 @@
  */
 package net.roguebean.sysinfo.values;
 
-import java.lang.reflect.Field;
-
 import android.app.Activity;
 import android.content.res.Configuration;
 
@@ -17,7 +15,7 @@ import net.roguebean.sysinfo.Values;
  * The <code>Values4Configuration</code> type.
  *
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  *
  */
 public class Values4Configuration extends Values {
@@ -26,22 +24,24 @@ public class Values4Configuration extends Values {
     public Object[] values(Activity activity) {
         Configuration c = activity.getResources().getConfiguration();
         
-        // added since Android API level 4.
-        String screenLayout;
-        int sl = getScreenLayoutByReflection(c);
-        if(sl == -1) {
-            screenLayout = "N/A (Available only on Android 1.6 or later)";
+        // Configuration.navigationHidden
+        Object navigationHidden = getFieldValue(Configuration.class, "navigationHidden", c, 5);
+        String navigationHiddenAsText;
+        if(navigationHidden instanceof Integer) {
+            int nh = ((Integer) navigationHidden).intValue();
+            navigationHiddenAsText = nh + " (" + getNavigationHiddenAsText(nh) + ")";
         } else {
-            screenLayout = sl + " (" + getScreenLayoutAsText(sl) + ")";
+            navigationHiddenAsText = String.valueOf(navigationHidden);
         }
         
-        // added since Android API level 5.
-        String navigationHidden; 
-        int nh = getNavigationHiddenByReflection(c);
-        if(nh == -1) {
-            navigationHidden = "N/A (Available only on Android 2.0 or later)";
+        // Configuration.uiMode
+        Object uiMode = getFieldValue(Configuration.class, "uiMode", c, 8);
+        String uiModeAsText;
+        if(uiMode instanceof Integer) {
+            int um = ((Integer) uiMode).intValue();
+            uiModeAsText = um + " (" + getUiModeAsText(um) + ")";
         } else {
-            navigationHidden = nh + " (" + getNavigationHiddenAsText(nh) + ")";
+            uiModeAsText = String.valueOf(uiMode);
         }
         
         return new Object[] {
@@ -49,69 +49,34 @@ public class Values4Configuration extends Values {
                 c.mcc,
                 c.mnc,
                 c.locale,
-                screenLayout,
+                c.screenLayout + " (" + getScreenLayoutAsText(c.screenLayout) + ")",
                 c.touchscreen + " (" + getTouchScreenAsText(c.touchscreen) + ")",
                 c.keyboard + " (" + getKeyboardAsText(c.keyboard) + ")",
                 c.keyboardHidden + " (" + getKeyboardHiddenAsText(c.keyboardHidden) + ")",
                 c.hardKeyboardHidden + " (" + getHardKeyboardHiddenAsText(c.hardKeyboardHidden) + ")",
                 c.navigation + " (" + getNavigationAsText(c.navigation) + ")",
-                navigationHidden,
-                c.orientation + "(" + getOrientationAsText(c.orientation) + ")"
+                navigationHiddenAsText,
+                c.orientation + "(" + getOrientationAsText(c.orientation) + ")",
+                uiModeAsText,
         };
     }
     
-    private int getScreenLayoutByReflection(Configuration c) {
-        int value;
-        try {
-            Field f = Configuration.class.getField("screenLayout");
-            value = ((Integer) f.get(c)).intValue();
-        } catch(Exception e) {
-            e.printStackTrace();
-            value = -1;
-        }
-        return value;
-    }
-    
-    private int getNavigationHiddenByReflection(Configuration c) {
-        int value;
-        try {
-            Field f = Configuration.class.getField("navigationHidden");
-            value = ((Integer) f.get(c)).intValue();
-        } catch(Exception e) {
-            e.printStackTrace();
-            value = -1;
-        }
-        return value;
-    }
-    
-    /* copied from Configuration class in Android 2.0 for convenience */
-    public static final int SCREENLAYOUT_SIZE_MASK = 0x0f;
-    public static final int SCREENLAYOUT_SIZE_UNDEFINED = 0x00;
-    public static final int SCREENLAYOUT_SIZE_SMALL = 0x01;
-    public static final int SCREENLAYOUT_SIZE_NORMAL = 0x02;
-    public static final int SCREENLAYOUT_SIZE_LARGE = 0x03;
-    
-    public static final int SCREENLAYOUT_LONG_MASK = 0x30;
-    public static final int SCREENLAYOUT_LONG_UNDEFINED = 0x00;
-    public static final int SCREENLAYOUT_LONG_NO = 0x10;
-    public static final int SCREENLAYOUT_LONG_YES = 0x20;
-    
     private String getScreenLayoutAsText(int flags) {
-        int lsize = flags & SCREENLAYOUT_SIZE_MASK;
-        int llong = flags & SCREENLAYOUT_LONG_MASK;
+        int lsize = flags & Configuration.SCREENLAYOUT_SIZE_MASK;
+        int llong = flags & Configuration.SCREENLAYOUT_LONG_MASK;
         
         String ssize;
         switch(lsize) {
-            case SCREENLAYOUT_SIZE_UNDEFINED:
+            case Configuration.SCREENLAYOUT_SIZE_UNDEFINED:
                 ssize = "UNDEFINED";
                 break;
-            case SCREENLAYOUT_SIZE_SMALL:
+            case Configuration.SCREENLAYOUT_SIZE_SMALL:
                 ssize = "SMALL";
                 break;
-            case SCREENLAYOUT_SIZE_NORMAL:
+            case Configuration.SCREENLAYOUT_SIZE_NORMAL:
                 ssize = "NORMAL";
                 break;
-            case SCREENLAYOUT_SIZE_LARGE:
+            case Configuration.SCREENLAYOUT_SIZE_LARGE:
                 ssize = "LARGE";
                 break;
             default:
@@ -121,12 +86,13 @@ public class Values4Configuration extends Values {
         
         String slong;
         switch(llong) {
-            case SCREENLAYOUT_LONG_UNDEFINED:
+            case Configuration.SCREENLAYOUT_LONG_UNDEFINED:
                 slong = "UNDEFINED";
-            case SCREENLAYOUT_LONG_NO:
+                break;
+            case Configuration.SCREENLAYOUT_LONG_NO:
                 slong = "NO";
                 break;
-            case SCREENLAYOUT_LONG_YES:
+            case Configuration.SCREENLAYOUT_LONG_YES:
                 slong = "YES";
                 break;
             default:
@@ -302,6 +268,59 @@ public class Values4Configuration extends Values {
         }
         
         return text;
+    }
+    
+    private static final int UI_MODE_TYPE_MASK = 0x0000000f;
+    private static final int UI_MODE_TYPE_UNDEFINED = 0x00000000;
+    private static final int UI_MODE_TYPE_NORMAL = 0x00000001;
+    private static final int UI_MODE_TYPE_DESK = 0x00000002;
+    private static final int UI_MODE_TYPE_CAR = 0x00000003;
+    
+    private static final int UI_MODE_NIGHT_MASK = 0x00000030;
+    private static final int UI_MODE_NIGHT_UNDEFINED = 0x00000000;
+    private static final int UI_MODE_NIGHT_NO = 0x00000010;
+    private static final int UI_MODE_NIGHT_YES = 0x00000020;
+    
+    private String getUiModeAsText(int flags) {
+        int type = flags & UI_MODE_TYPE_MASK;
+        int night = flags & UI_MODE_NIGHT_MASK;
+        
+        String typeText;
+        switch(type) {
+            case UI_MODE_TYPE_UNDEFINED:
+                typeText = "UNDEFINED";
+                break;
+            case UI_MODE_TYPE_NORMAL:
+                typeText = "NORMAL";
+                break;
+            case UI_MODE_TYPE_DESK:
+                typeText = "DESK";
+                break;
+            case UI_MODE_TYPE_CAR:
+                typeText = "CAR";
+                break;
+            default:
+                typeText = "UNKNOWN";
+                break;
+        }
+        
+        String nightText;
+        switch(night) {
+            case UI_MODE_NIGHT_UNDEFINED:
+                nightText = "UNDEFINED";
+                break;
+            case UI_MODE_NIGHT_NO:
+                nightText = "NO";
+                break;
+            case UI_MODE_NIGHT_YES:
+                nightText = "YES";
+                break;
+            default:
+                nightText = "UNKNOWN";
+                break;
+        }
+        
+        return typeText + "|" + nightText;
     }
     
 }

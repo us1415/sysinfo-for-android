@@ -25,6 +25,7 @@
 		<item>Dim Screen</item>
 		<item>Screen Off Timeout</item>
 		<item>Screen Brightness</item>
+		<item>Screen Brightness Mode</item>
 		<item>Show Processes</item>
 		<item>Always Finish Activities</item>
 		<item>Mode Ringer</item>
@@ -36,6 +37,7 @@
 		<item>Volume Voice</item>
 		<item>Volume Music</item>
 		<item>Volume Alarm</item>
+		<item>Volume Bluetooth SCO</item>
 		<item>Append For Last Audible</item>
 		<item>Ringtone</item>
 		<item>Notification Sound</item>
@@ -105,9 +107,10 @@
 		<item>Scaling factor for fonts, float.</item>
 		<item>Name of an application package to be debugged.</item>
 		<item>If 1, when launching DEBUG_APP it will wait for the debugger before starting user code.  If 0, it will run normally.</item>
-		<item>Whether or not to dim the screen. 0=no  1=yes</item>
+		<item>Whether or not to dim the screen. 0=no 1=yes</item>
 		<item>The timeout before the screen turns off.</item>
 		<item>The screen backlight brightness between 0 and 255.</item>
+		<item>Control whether to enable automatic brightness mode. 0=no 1=yes</item>
 		<item>Control whether the process CPU usage meter should be shown.</item>
 		<item>If 1, the activity manager will aggressively finish activities and processes as soon as they are no longer needed.  If 0, the normal extended lifetime is used.</item>
 		<item>Ringer mode. This is used internally, changing this value will not change the ringer mode. See AudioManager.</item>
@@ -119,6 +122,7 @@
 		<item>Voice call volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
 		<item>Music/media/gaming volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
 		<item>Alarm volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
+		<item>Bluetooth Headset volume. This is used internally, changing this value will not change the volume. See AudioManager.</item>
 		<item>Appended to various volume related settings to record the previous values before they the settings were affected by a silent/vibrate ringer mode change.</item>
 		<item>Persistent store for the system-wide default ringtone URI.\nIf you need to play the default ringtone at any given time, it is recommended you give {android.provider.Settings.System.DEFAULT_RINGTONE_URI} to the media player. It will resolve to the set default ringtone at the time of playing.</item>
 		<item>Persistent store for the system-wide default notification sound.</item>
@@ -191,6 +195,7 @@
         <item>{android.provider.Settings.System.DIM_SCREEN}</item>
         <item>{android.provider.Settings.System.SCREEN_OFF_TIMEOUT}</item>
         <item>{android.provider.Settings.System.SCREEN_BRIGHTNESS}</item>
+        <item>{android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE}</item>
         <item>{android.provider.Settings.System.SHOW_PROCESSES}</item>
         <item>{android.provider.Settings.System.ALWAYS_FINISH_ACTIVITIES}</item>
         <item>{android.provider.Settings.System.MODE_RINGER}</item>
@@ -202,6 +207,7 @@
         <item>{android.provider.Settings.System.VOLUME_VOICE}</item>
         <item>{android.provider.Settings.System.VOLUME_MUSIC}</item>
         <item>{android.provider.Settings.System.VOLUME_ALARM}</item>
+        <item>{android.provider.Settings.System.VOLUME_BLUETOOTH_SCO}</item>
         <item>{android.provider.Settings.System.APPEND_FOR_LAST_AUDIBLE}</item>
         <item>{android.provider.Settings.System.RINGTONE}</item>
         <item>{android.provider.Settings.System.NOTIFICATION_SOUND}</item>

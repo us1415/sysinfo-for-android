@@ -16,6 +16,7 @@
 		<item>Navigation</item>
 		<item>Navigation Hidden</item>
 		<item>Orientation</item>
+		<item>UI Mode</item>
 	</string-array>
 	
 	<string-array name="configuration_item_descriptions">
@@ -23,7 +24,7 @@
 		<item>IMSI MCC (Mobile Country Code).  0 if undefined.</item>
 		<item>IMSI MNC (Mobile Network Code).  0 if undefined.</item>
 		<item>Current user preference for the locale.</item>
-		<item>Bit mask of overall layout of the screen.  Currently there are two fields:\nThe {android.content.res.Configuration.SCREENLAYOUT_SIZE_MASK} bits define the overall size of the screen.  They may be one of {android.content.res.Configuration.SCREENLAYOUT_SIZE_SMALL}, {android.content.res.Configuration.SCREENLAYOUT_SIZE_NORMAL}, or {android.content.res.Configuration.SCREENLAYOUT_SIZE_LARGE}.\nThe {android.content.res.Configuration.SCREENLAYOUT_LONG_MASK} defines whether the screen is wider/taller than normal.  They may be one of {android.content.res.Configuration.SCREENLAYOUT_LONG_NO} or {android.content.res.Configuration.SCREENLAYOUT_LONG_YES}.</item>
+		<item>Bit mask of overall layout of the screen.  Currently there are two fields:\nThe {android.content.res.Configuration.SCREENLAYOUT_SIZE_MASK} bits define the overall size of the screen. They may be one of {android.content.res.Configuration.SCREENLAYOUT_SIZE_SMALL}, {android.content.res.Configuration.SCREENLAYOUT_SIZE_NORMAL}, or {android.content.res.Configuration.SCREENLAYOUT_SIZE_LARGE}.\nThe {android.content.res.Configuration.SCREENLAYOUT_LONG_MASK} defines whether the screen is wider/taller than normal.  They may be one of {android.content.res.Configuration.SCREENLAYOUT_LONG_NO} or {android.content.res.Configuration.SCREENLAYOUT_LONG_YES}.</item>
 		<item>The kind of touch screen attached to the device. One of: {android.content.res.Configuration.TOUCHSCREEN_NOTOUCH}, {android.content.res.Configuration.TOUCHSCREEN_STYLUS}, {android.content.res.Configuration.TOUCHSCREEN_FINGER}.</item>
 		<item>The kind of keyboard attached to the device. One of: {android.content.res.Configuration.KEYBOARD_NOKEYS}, {android.content.res.Configuration.KEYBOARD_QWERTY}, {android.content.res.Configuration.KEYBOARD_12KEY}.</item>
 		<item>A flag indicating whether any keyboard is available.  Unlike {android.content.res.Configuration.hardKeyboardHidden}, this also takes into account a soft keyboard, so if the hard keyboard is hidden but there is soft keyboard available, it will be set to NO.  Value is one of: {android.content.res.Configuration.KEYBOARDHIDDEN_NO}, {android.content.res.Configuration.KEYBOARDHIDDEN_YES}.</item>
@@ -31,6 +32,7 @@
 		<item>The kind of navigation method available on the device. One of: {android.content.res.Configuration.NAVIGATION_NONAV}, {android.content.res.Configuration.NAVIGATION_DPAD}, {android.content.res.Configuration.NAVIGATION_TRACKBALL}, {android.content.res.Configuration.NAVIGATION_WHEEL}.</item>
 		<item>A flag indicating whether any 5-way or DPAD navigation available. This will be set on a device with a mechanism to hide the navigation controls from the user, when that mechanism is closed.  One of: {android.content.res.Configuration.NAVIGATIONHIDDEN_NO}, {android.content.res.Configuration.NAVIGATIONHIDDEN_YES}.</item>
 		<item>Overall orientation of the screen.  May be one of {android.content.res.Configuration.ORIENTATION_LANDSCAPE}, {android.content.res.Configuration.ORIENTATION_PORTRAIT}, or {android.content.res.Configuration.ORIENTATION_SQUARE}.</item>
+		<item>Bit mask of the ui mode. Currently there are two fields:\nThe {android.content.res.Configuration.UI_MODE_TYPE_MASK} bits define the overall ui mode of the device. They may be one of {android.content.res.Configuration.UI_MODE_TYPE_UNDEFINED}, {android.content.res.Configuration.UI_MODE_TYPE_NORMAL}, {android.content.res.Configuration.UI_MODE_TYPE_DESK}, or {android.content.res.Configuration.UI_MODE_TYPE_CAR}.\nThe {android.content.res.Configuration.UI_MODE_NIGHT_MASK} defines whether the screen is in a special mode. They may be one of {android.content.res.Configuration.UI_MODE_NIGHT_UNDEFINED}, {android.content.res.Configuration.UI_MODE_NIGHT_NO} or {android.content.res.Configuration.UI_MODE_NIGHT_YES}.</item>
 	</string-array>
 	
 	<string-array name="configuration_item_references">
@@ -46,5 +48,6 @@
 		<item>{android.content.res.Configuration.navigation}</item>
 		<item>{android.content.res.Configuration.navigationHidden}</item>
 		<item>{android.content.res.Configuration.orientation}</item>
+		<item>{android.content.res.Configuration.uiMode}</item>
 	</string-array>
 </resources>

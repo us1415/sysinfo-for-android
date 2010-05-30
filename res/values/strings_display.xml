@@ -8,6 +8,7 @@
 		<item>Width</item>
 		<item>Height</item>
 		<item>Orientation</item>
+		<item>Rotation</item>
 		<item>Pixel Format</item>
 		<item>Refresh Rate</item>
 		<item>Density</item>
@@ -17,12 +18,13 @@
 	</string-array>
 
 	<string-array name="display_item_descriptions">
-    	<item>index of this display.</item>
-    	<item>width of this display in pixels.</item>
-    	<item>height of this display in pixels.</item>
-    	<item>orientation of this display.</item>
-    	<item>pixel format of this display.</item>
-    	<item>refresh rate of this display in frames per second.</item>
+    	<item>The index of this display.</item>
+    	<item>The width of this display in pixels.</item>
+    	<item>The height of this display in pixels.</item>
+    	<item>The orientation of this display.</item>
+    	<item>The rotation of the screen from its "natural" orientation. The returned value may be {android.view.Surface.ROTATION_0} (no rotation), {android.view.Surface.ROTATION_90}, {android.view.Surface.ROTATION_180}, or {android.view.Surface.ROTATION_270}. For example, if a device has a naturally tall screen, and the user has turned it on its side to go into a landscape orientation, the value returned here may be either {android.view.Surface.ROTATION_90} or {android.view.Surface.ROTATION_270} depending on the direction it was turned. The angle is the rotation of the drawn graphics on the screen, which is the opposite direction of the physical rotation of the device. For example, if the device is rotated 90 degrees counter-clockwise, to compensate rendering will be rotated by 90 degrees clockwise and thus the returned value here will be {android.view.Surface.ROTATION_90}.</item>
+    	<item>The pixel format of this display.</item>
+    	<item>The refresh rate of this display in frames per second.</item>
     	<item>The logical density of the display.  This is a scaling factor for the Density Independent Pixel unit, where one DIP is one pixel on an approximately 160 dpi screen (for example a 240x320, 1.5"x2" screen), providing the baseline of the system's display. Thus on a 160dpi screen this density value will be 1; on a 106 dpi screen it would be .75; etc. This value does not exactly follow the real screen size (as given by {android.util.DisplayMetrics.xdpi} and {android.util.DisplayMetrics.ydpi}, but rather is used to scale the size of the overall UI in steps based on gross changes in the display dpi.  For example, a 240x320 screen will have a density of 1 even if its width is 1.8", 1.3", etc. However, if the screen resolution is increased to 320x480 but the screen size remained 1.5"x2" then the density would be increased (probably to 1.5).</item>
     	<item>A scaling factor for fonts displayed on the display.  This is the same as {android.util.DisplayMetrics.density}, except that it may be adjusted in smaller increments at runtime based on a user preference for the font size.</item>
     	<item>The exact physical pixels per inch of the screen in the X dimension.</item>
@@ -34,6 +36,7 @@
 		<item>{android.view.Display.getWidth()}</item>
 		<item>{android.view.Display.getHeight()}</item>
 		<item>{android.view.Display.getOrientation()}</item>
+		<item>{android.view.Display.getRotation()}</item>
 		<item>{android.view.Display.getPixelFormat()}</item>
 		<item>{android.view.Display.getRefreshRate()}</item>
 		<item>{android.util.DisplayMetrics.density}</item>

@@ -15,7 +15,7 @@ import net.roguebean.android.content.res.PatternedStringResolver;
  * of a java element into a string indicating Android API reference URL.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 class AndroidDocumentReferenceResolver extends PatternedStringResolver {
     
@@ -28,6 +28,8 @@ class AndroidDocumentReferenceResolver extends PatternedStringResolver {
     private static final String SOURCE_SEPARATOR_REGEX = "\\.";
     
     private static final char SOURCE_SEPARATOR = '.';
+    
+    private static final char SOURCE_METHOD_OPEN = '(';
     
     private static final String PATH_SEPARATOR = "/";
     
@@ -91,7 +93,14 @@ class AndroidDocumentReferenceResolver extends PatternedStringResolver {
             
             if(found < length) {
                 // source is a member name not a class name.
-                int last = source.lastIndexOf(SOURCE_SEPARATOR);
+                String temp;
+                int methodStart = source.lastIndexOf(SOURCE_METHOD_OPEN);
+                if(methodStart >= 0) {
+                    temp = source.substring(0, methodStart);
+                } else {
+                    temp = source;
+                }
+                int last = temp.lastIndexOf(SOURCE_SEPARATOR);
                 if(last > found) {
                     // source has an inner class name.
                     String inClsName = source.substring(found + 1, last);

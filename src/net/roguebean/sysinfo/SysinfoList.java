@@ -10,7 +10,7 @@ import java.util.List;
  * The <code>SysinfoList</code> class represents a single list data which has name and items.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 class SysinfoList {
     

@@ -19,7 +19,7 @@ import net.roguebean.sysinfo.R;
  * The <code>AboutActivity</code> class is an activity class to show 'about' screen.
  * 
  * @author Yonghwan Cho
- * @version 0.6
+ * @version 0.7
  */
 public class AboutActivity extends Activity {
     
