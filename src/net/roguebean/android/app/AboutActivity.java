@@ -73,6 +73,7 @@ public class AboutActivity extends Activity {
         
         // linkify
         Linkify.addLinks(vLink, Linkify.ALL);
+        Linkify.addLinks(vCopyright, Linkify.ALL);
         Linkify.addLinks(vContact, Linkify.ALL);
         
         // set title
