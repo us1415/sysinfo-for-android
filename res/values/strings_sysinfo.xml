@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="sysinfo_name">Sysinfo</string>
-    <string name="sysinfo_title">Sysinfo</string>
     <string name="sysinfo_description">Android\u2122 developers tool for viewing system informations.</string>
     <string name="sysinfo_link">http://code.google.com/p/sysinfo-for-android/</string>
     <string name="sysinfo_contact"><a href="mailto:roguebean@gmail.com">roguebean@gmail.com</a></string>
